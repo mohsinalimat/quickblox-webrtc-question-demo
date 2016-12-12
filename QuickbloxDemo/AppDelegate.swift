@@ -16,6 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        QBSettings.setApplicationID(50756)
+        QBSettings.setAuthKey("zLe4BLsmUv9Oq7F")
+        QBSettings.setAuthSecret("EHRrADNNFY8QOrb")
+        QBSettings.setAccountKey("2gbtnAVXpsAMhpmbqjdS")
+        QBSettings.setLogLevel(.errors)
+        
+        QBRTCConfig.setAnswerTimeInterval(60)
+        QBRTCConfig.setDisconnectTimeInterval(30)
+        QBRTCConfig.setDialingTimeInterval(5)
+        QBRTCConfig.setStatsReportTimeInterval(1)
+        
+        QBRTCClient.initializeRTC()
+        
         return true
     }
 
